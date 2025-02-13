@@ -59,7 +59,7 @@ class LoginPage:
             conn = mysql.connector.connect(
                 host="localhost",
                 user="root",
-                password="piyush@2318p",  # Replace with your MySQL password
+                password="xyz",  # Replace with your MySQL password
                 database="management"
             )
             cursor = conn.cursor()
@@ -147,7 +147,7 @@ class RegisterPage:
             conn = mysql.connector.connect(
                 host="localhost",
                 user="root",
-                password="piyush@2318p",  # Replace with your MySQL password
+                password="xyz",  # Replace with your MySQL password
                 database="management"
             )
             cursor = conn.cursor()
