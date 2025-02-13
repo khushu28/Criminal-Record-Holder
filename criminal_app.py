@@ -325,7 +325,7 @@ class Criminal:
             messagebox.showerror('Error','All Field are required')
         else:
             try:
-                conn=mysql.connector.connect(host='localhost',username='root',password='piyush@2318p',database='management')
+                conn=mysql.connector.connect(host='localhost',username='root',password='xyz',database='management')
                 my_cursor=conn.cursor()
                 my_cursor.execute('INSERT INTO criminal1 VALUES(%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)',(
                                                                                                                 self.var_case_id.get(),
@@ -357,7 +357,7 @@ class Criminal:
     
     #fase data
     def fetch_data(self):
-        conn=mysql.connector.connect(host='localhost',username='root',password='piyush@2318p',database='management')
+        conn=mysql.connector.connect(host='localhost',username='root',password='xyz',database='management')
         my_cursor=conn.cursor()
         my_cursor.execute('SELECT * FROM criminal1')
         data=my_cursor.fetchall()
@@ -398,7 +398,7 @@ class Criminal:
             try:
                 update=messagebox.askyesno('Update','Are you sure to update this Criminal Record')
                 if update>0:
-                    conn=mysql.connector.connect(host='localhost',username='root',password='piyush@2318p',database='management')
+                    conn=mysql.connector.connect(host='localhost',username='root',password='xyz',database='management')
                     my_cursor=conn.cursor()
                     my_cursor.execute('UPDATE criminal1 set Criminal_no=%s,Criminal_Name=%s,Arrest_Date=%s,Address=%s,Ocupation=%s,Date_of_crime=%s,Age=%s,Birth_Mark=%s,Crime_type=%s,Father_Name=%s,Date_of_Birth=%s,Gender=%s,Most_Wanted=%s where Case_id=%s',(
                                                                                                                                                                                                                                                                         self.var_criminal_no.get(),
@@ -441,7 +441,7 @@ class Criminal:
             try:
                 Delete=messagebox.askyesno('Delete','Are you sure to Delete this Criminal Record')
                 if Delete>0:
-                    conn=mysql.connector.connect(host='localhost',username='root',password='piyush@2318p',database='management')
+                    conn=mysql.connector.connect(host='localhost',username='root',password='xyz',database='management')
                     my_cursor=conn.cursor()
                     sql='DELETE FROM criminal1 where Case_id=%s'
                     value=(self.var_case_id.get(),)
@@ -480,7 +480,7 @@ class Criminal:
             messagebox.showerror('Error','All Field are required')
         else:
             try:
-                conn=mysql.connector.connect(host='localhost',username='root',password='piyush@2318p',database='management')
+                conn=mysql.connector.connect(host='localhost',username='root',password='xyz',database='management')
                 my_cursor=conn.cursor()
                 my_cursor.execute('Select * from criminal1 where ' +str(self.var_com_search.get())+" LIKE'%"+str(self.var_search.get()+"%'"))
                 rows=my_cursor.fetchall()
